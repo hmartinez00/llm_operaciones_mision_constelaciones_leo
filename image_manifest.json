@@ -1,0 +1,23 @@
+{
+    "fig1_crecimiento_constelaciones_leo.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y ejes. Gráfico de líneas y áreas apiladas mostrando el crecimiento explosivo del número de satélites activos en LEO desde 2018 hasta 2025. Eje X: años, Eje Y: número de satélites. Curvas marcadas para Starlink, OneWeb, Kuiper y Total. Estilo IEEE limpio y profesional, sin sombras, sin gradientes, líneas vectoriales nítidas, alta precisión técnica."
+    },
+    "tabla2_comparativa_llm.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y bordes. Tabla IEEE-style comparativa con 5 columnas (Enfoque, Tipo, Ventaja principal, Limitación principal, Entorno de prueba) y 4 filas de contenido técnico. Bordes limpios, alineación precisa, estilo profesional académico, sin sombras, sin gradientes, sin texto incrustado real (solo placeholders técnicos), alta legibilidad, diseño vectorial limpio."
+    },
+    "fig2_arquitectura_llm.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y flechas. Diagrama de bloques de arquitectura LLM-aumentada: rectángulos principales (Procesador de Telemetría, Motor de Prompt Engineering, Núcleo LLM, Módulo de Generación y Validación de Comandos, Operador Humano). Flechas bidireccionales claras mostrando flujos de datos y control. Diferenciación visual entre componentes ground y space. Estilo IEEE limpio, líneas vectoriales nítidas, sin sombras, sin gradientes, sin texto incrustado real (solo placeholders técnicos), alta precisión técnica."
+    },
+    "fig4_simulacion_entorno.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y flechas. Diagrama del entorno de simulación: constelación LEO con múltiples satélites, bloques de dinámica orbital, inyección de fallos, interfaz LLM y operador humano. Elementos visuales: órbitas, nodos de satélites y flujos de datos. Estilo IEEE limpio, líneas vectoriales nítidas, sin sombras, sin gradientes, sin texto incrustado real (solo placeholders técnicos), composición equilibrada y profesional."
+    },
+    "fig3_comparativa_tiempo_respuesta.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB, gris técnico #4A4A4A y verde acento para LLM. Gráfico de barras comparativo mostrando tiempo de respuesta medio para tres enfoques (GUI Tradicional, Script-based, LLM Propuesto) en diferentes tipos de tareas operativas. Eje Y en segundos, barras con valores exactos. Estilo IEEE limpio, líneas vectoriales nítidas, sin sombras, sin gradientes, alta precisión técnica."
+    },
+    "tabla4_comparativa_enfoques.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y bordes. Tabla IEEE-style comparativa con 5 columnas (Enfoque, Usabilidad, Reducción Errores, Escalabilidad, Confiabilidad) y 4 filas de enfoques técnicos. Bordes limpios, alineación precisa, estilo profesional académico, sin sombras, sin gradientes, sin texto incrustado real (solo placeholders técnicos), alta legibilidad, diseño vectorial limpio."
+    },
+    "fig7_resumen_conceptual.png": {
+        "prompt_ia": "2D technical vector diagram, engineering schematic, flat design, minimalista, fondo blanco puro, colores azul cobalto #0047AB y gris técnico #4A4A4A, negro para líneas y flechas. Diagrama resumen conceptual que integra los beneficios principales: control intuitivo (icono de chat), reducción de errores (escudo), escalabilidad para mega-constelaciones y flujo desde telemetría hasta comando. Elementos conectados visualmente con flechas. Estilo IEEE limpio, líneas vectoriales nítidas, sin sombras, sin gradientes, sin texto incrustado real (solo placeholders técnicos), composición equilibrada y profesional."
+    }
+}

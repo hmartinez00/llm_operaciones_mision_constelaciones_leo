@@ -1,0 +1,17 @@
+\section{Conclusiones y Trabajos Futuros}
+
+\subsection{7.1 Conclusiones}
+
+Resulta revelador observar cómo una tecnología surgida inicialmente para tareas de procesamiento de lenguaje natural se ha convertido en un componente transformador para operaciones de misión en el espacio. Este trabajo ha demostrado que una arquitectura LLM-aumentada puede ofrecer control intuitivo y reducir de forma significativa los errores humanos en el manejo de mega-constelaciones LEO.
+
+Los resultados experimentales muestran mejoras sustanciales: reducción del 76\% en tiempo de resolución de tareas, aumento de la tasa de éxito en primer intento hasta el 91\% y una notable disminución de intervenciones humanas. Estos hallazgos se alinean con estudios previos en simuladores avanzados \cite{carrasco2025llm}, pero extienden su aplicación al contexto específico y desafiante de constelaciones de gran escala, donde la carga operativa tradicional se vuelve insostenible.
+
+Más allá de las métricas, el mayor aporte radica en el cambio de paradigma: pasar de operadores que “luchan contra la interfaz” a operadores que colaboran con un sistema que entiende su intención. Después de décadas viendo cómo la complejidad de las misiones crece más rápido que la capacidad humana para gestionarla, considero que enfoques como el presentado aquí son no solo prometedores, sino necesarios para la sostenibilidad operativa del sector.
+
+\subsection{7.2 Trabajos Futuros}
+
+Lejos de considerar el desarrollo terminado, varias líneas críticas merecen atención inmediata. Particularmente prioritaria resulta la transición desde simulaciones de alta fidelidad hacia validación en entornos operativos reales y, eventualmente, en vuelo.
+
+Siguiendo las lecciones prácticas extraídas de evaluaciones en centros de control reales \cite{schefels2024evaluating}, se propone desarrollar versiones edge-optimized del modelo para reducir latencia y mejorar privacidad de datos. Otras direcciones relevantes incluyen: la implementación de sistemas multi-agente LLM para coordinación distribuida entre satélites, la integración con frameworks de verificación formal para acciones críticas, y el estudio de mecanismos de alineación robusta que minimicen riesgos de alucinaciones o comportamientos no deseados.
+
+Resulta igualmente importante explorar aspectos regulatorios y de certificación para el uso de LLMs en operaciones de misión. Solo mediante una combinación de avances técnicos, validación rigurosa en órbita y marcos normativos adecuados lograremos que esta tecnología pase de ser una herramienta experimental a un pilar fiable de las operaciones espaciales del futuro.

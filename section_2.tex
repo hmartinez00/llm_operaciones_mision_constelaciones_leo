@@ -1,0 +1,37 @@
+\section{Estado del Arte}
+
+\subsection{2.1 LLM en Operaciones Espaciales}
+
+Resulta revelador observar cómo los Modelos de Lenguaje Grande han pasado en muy poco tiempo de ser una curiosidad experimental a una herramienta con potencial real en centros de control de misiones. Lejos de ser un asunto resuelto, su aplicación en entornos operativos espaciales aún genera tanto entusiasmo como escepticismo justificado.
+
+Uno de los estudios más relevantes en este sentido proviene del German Space Operations Center (GSOC). Schefels y colaboradores evaluaron el uso de LLMs en tareas reales de operaciones, demostrando su capacidad para recuperación rápida de información, diagnóstico de anomalías y generación de resúmenes de telemetría \cite{schefels2024evaluating}. En muchos casos estudiados, los modelos lograron reducir el tiempo necesario para comprender estados complejos del satélite, aunque mostraron limitaciones importantes en razonamiento causal profundo y manejo de situaciones novedosas.
+
+No obstante, cabe matizar que la mayoría de estas evaluaciones se han realizado en entornos controlados o con datos históricos, dejando abierta la pregunta sobre su robustez ante fallos en tiempo real y flujos de telemetría caóticos típicos de mega-constelaciones.
+
+\subsection{2.2 Agentes Autónomos en Control de Satélites}
+
+Particularmente llamativo es el salto cualitativo que representan los enfoques que posicionan al LLM como agente operador en lugar de mero asistente. Rodriguez et al. exploraron esta dirección al demostrar que modelos de lenguaje pueden actuar como operadores completos de naves espaciales en simuladores avanzados \cite{rodriguez2024llm}. Su trabajo contrasta fuertemente con los enfoques tradicionales basados en reinforcement learning, que suelen requerir millones de iteraciones de entrenamiento y carecen de la flexibilidad interpretativa del lenguaje natural.
+
+Mientras los agentes RL tienden a ser altamente especializados y frágiles ante cambios en el entorno, los LLM ofrecen razonamiento en contexto y la capacidad de explicar sus decisiones. Esta propiedad resulta especialmente valiosa en operaciones de misión donde la trazabilidad y la supervisión humana siguen siendo imprescindibles.
+
+\subsection{2.3 Interfaces Hombre-Máquina en Misiones}
+
+Uno de los desafíos persistentes que surge al analizar el estado del arte radica en cerrar la brecha entre la capacidad técnica de los sistemas autónomos y la necesidad de control significativo por parte de los operadores humanos.
+
+Maranto y colaboradores propusieron LLMSat, un agente orientado a metas basado en LLM para exploración espacial, que destaca por su capacidad de descomponer objetivos de alto nivel en acciones concretas \cite{maranto2024llmsat}. Este tipo de interfaces conversacionales contrasta marcadamente con las interfaces gráficas tradicionales y los lenguajes de scripting, ofreciendo una interacción mucho más natural. Sin embargo, su implementación revela trade-offs importantes entre flexibilidad y predictibilidad del comportamiento del sistema.
+
+\begin{table}[t]
+\centering
+\caption{Comparativa de enfoques basados en LLM para operaciones espaciales.}
+\label{tab:comparativa_llm}
+\begin{tabular}{lcccc}
+\toprule
+Enfoque & Tipo & Ventaja principal & Limitación principal & Entorno de prueba \\
+\midrule
+Rodriguez et al. (2024) & Operador completo & Razonamiento en lenguaje natural & Dependencia de simulación & KSP \\
+Schefels et al. (2024) & Asistente & Reducción de carga cognitiva & Dificultad en razonamiento causal & GSOC real \\
+Maranto et al. (2024) & Agente goal-oriented & Descomposición de objetivos & Predictibilidad limitada & Simuladores de exploración \\
+Propuesta (este trabajo) & Híbrido supervisor-agente & Balance autonomía y supervisión & Pendiente de validación en vuelo & Mega-constelaciones LEO \\
+\bottomrule
+\end{tabular}
+\end{table}

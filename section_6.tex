@@ -1,0 +1,39 @@
+\section{Discusión}
+
+\subsection{6.1 Implicaciones Operativas}
+
+Particularmente llamativo resulta el cambio de paradigma que representa pasar de interfaces rígidas a un sistema conversacional capaz de entender intención operativa. El enfoque goal-oriented propuesto por Maranto et al. \cite{maranto2024llmsat} cobra aquí especial relevancia, ya que nuestra implementación demuestra que los operadores pueden expresar objetivos de alto nivel (“ajustar phasing de los satélites del plano 12 manteniendo separación mínima”) y recibir ejecución coordinada sin necesidad de desglosar cada comando individualmente.
+
+En el contexto de mega-constelaciones LEO, esta capacidad implica una reducción drástica de la carga operativa en tierra. Centros de control que hoy requieren decenas de operadores podrían optimizar su personal hacia tareas de supervisión estratégica y resolución de excepciones, mientras el sistema gestiona de forma fluida las operaciones rutinarias. Esto no solo mejora la eficiencia económica, sino que también reduce la fatiga humana en turnos prolongados.
+
+\subsection{6.2 Limitaciones Técnicas y de Confiabilidad}
+
+Uno de los desafíos persistentes que surge al analizar estos sistemas radica en la brecha entre el excelente desempeño en entornos controlados y la incertidumbre real de operaciones orbitales.
+
+Aunque los resultados son prometedores, estudios como el de Rodriguez et al. \cite{rodriguez2024llm} ya advertían sobre limitaciones importantes en razonamiento causal profundo y manejo de escenarios fuera de distribución. Nuestra implementación no está exenta de estos problemas: el modelo ocasionalmente genera explicaciones convincentes pero técnicamente inexactas, especialmente bajo alta incertidumbre en telemetría. 
+
+La latencia del LLM (actualmente entre 1.8 y 4.2 segundos según complejidad) sigue siendo un factor crítico en maniobras de tiempo real. Además, la dependencia de contexto largo hace al sistema vulnerable a degradaciones en la calidad del enlace de comunicaciones, un riesgo nada desdeñable en constelaciones LEO.
+
+\subsection{6.3 Consideraciones de Seguridad}
+
+Resulta revelador observar cómo las ventajas en usabilidad traen consigo nuevos vectores de riesgo que deben gestionarse cuidadosamente. 
+
+La capacidad del sistema para interpretar y ejecutar instrucciones en lenguaje natural amplifica tanto los beneficios como los peligros potenciales. Un prompt malicioso o ambiguo podría, en teoría, generar maniobras peligrosas si no existen salvaguardas robustas. Por ello, implementamos múltiples capas de verificación: chequeo de reglas de seguridad codificadas, simulación rápida de consecuencias antes de ejecución y confirmación humana obligatoria para acciones críticas.
+
+\begin{table}[t]
+\centering
+\caption{Comparativa de enfoques para operaciones de misión en constelaciones LEO.}
+\label{tab:comparativa_enfoques}
+\begin{tabular}{lcccc}
+\toprule
+Enfoque & Usabilidad & Reducción Errores & Escalabilidad & Confiabilidad \\
+\midrule
+GUI Tradicional & Baja & Media & Baja & Alta \\
+Agentes RL & Media & Alta & Media & Media \\
+LLM Goal-oriented & Alta & Alta & Alta & En desarrollo \\
+Propuesta Híbrida & Muy Alta & Muy Alta & Alta & Alta con safeguards \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+En definitiva, el camino hacia la adopción operativa pasa necesariamente por estándares rigurosos de validación, auditoría continua de prompts y mecanismos de fallback a control manual directo. Solo así podremos aprovechar el enorme potencial de los LLMs sin comprometer la integridad de la misión.

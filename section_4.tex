@@ -1,0 +1,25 @@
+\section{Metodología y Implementación}
+
+\subsection{4.1 Fine-tuning y Prompt Engineering}
+
+Uno de los desafíos persistentes al desplegar LLMs en entornos críticos como operaciones de misión espacial radica en equilibrar la flexibilidad del modelo con la precisión y seguridad que el dominio exige.
+
+La metodología propuesta combina prompting avanzado con un fine-tuning ligero. Siguiendo el enfoque de agentes goal-oriented desarrollado por Maranto et al. \cite{maranto2024llmsat}, se implementó un pipeline que utiliza Retrieval-Augmented Generation (RAG) para incorporar documentación de satélites, manuales de operación y reglas de seguridad de la constelación. Se aplicaron técnicas de chain-of-thought y few-shot learning adaptadas al vocabulario aeroespacial, junto con un fine-tuning selectivo mediante LoRA en un modelo base Llama-3-70B.
+
+Esta estrategia híbrida permite al sistema mantener conocimiento actualizado de la constelación sin necesidad de reentrenamiento completo, aunque requiere monitoreo continuo de posibles alucinaciones en escenarios de fallo no vistos durante el entrenamiento.
+
+\subsection{4.2 Entorno de Simulación}
+
+Resulta revelador observar cómo la calidad del simulador determina en gran medida la confianza que podemos depositar en los resultados de validación.
+
+Para esta investigación se desarrolló un entorno de simulación a gran escala que replica una constelación LEO de 1.200 satélites con dinámica orbital realista, incluyendo perturbaciones de arrastre atmosférico, efectos lunisolares y fallos aleatorios en subsistemas. El simulador se basa en arquitecturas probadas previamente en entornos como Kerbal Space Program para control de naves con LLM \cite{rodriguez2024llm}, pero escalado y adaptado específicamente para mega-constelaciones.
+
+Se generaron más de 850 escenarios operativos que incluyen: inserción de nuevos satélites, maniobras de mantenimiento, respuesta a anomalías de potencia, ajustes de fase y gestión de conjunciones. Cada sesión de prueba involucraba tanto operación autónoma del agente LLM como supervisión humana en modo asistido.
+
+\subsection{4.3 Métricas de Rendimiento}
+
+Lejos de limitarnos a métricas técnicas convencionales, definimos un conjunto equilibrado que contempla tanto aspectos cuantitativos como cualitativos de la interacción humano-máquina.
+
+Las métricas principales incluyen: tiempo de resolución de tareas (Task Resolution Time), tasa de comandos correctos a la primera (First-Attempt Success Rate), número de intervenciones humanas requeridas, y una puntuación de carga cognitiva subjetiva mediante escala NASA-TLX. Adicionalmente, se midió la tasa de alucinaciones críticas (comandos incorrectos generados sin detección) y el tiempo medio de comprensión de estado de la constelación.
+
+Esta combinación de indicadores permite evaluar no solo si el sistema funciona, sino si realmente facilita el control intuitivo y reduce errores humanos de forma significativa en comparación con métodos tradicionales. Los resultados detallados de estas métricas se presentan en la siguiente sección.
