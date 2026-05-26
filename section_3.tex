@@ -24,7 +24,11 @@ El sistema implementa un pipeline de procesamiento que filtra, resume y contextu
 El prompt base sigue una estructura modular que incluye: estado actual de la constelación, objetivos de la misión, restricciones de seguridad y ejemplos de interacciones previas. Esta aproximación tiende a mejorar significativamente la coherencia de las respuestas del modelo, aunque requiere calibración cuidadosa para evitar alucinaciones en escenarios de fallo.
 
 \begin{equation}
-\text{Prompt}_t = \text{System\_Role} + \text{Telemetry\_Summary}_t + \text{Mission\_Context} + \text{Examples} + \text{User\_Query}_t
+\begin{split}
+Prompt_t = & \, System\_Role + Telemetry\_Summary_t \\
+& + Mission\_Context + Examples \\
+& + User\_Query_t
+\end{split}
 \label{eq:prompt_structure}
 \end{equation}
 

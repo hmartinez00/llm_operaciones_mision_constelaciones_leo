@@ -20,7 +20,7 @@ Resulta revelador observar cómo las ventajas en usabilidad traen consigo nuevos
 
 La capacidad del sistema para interpretar y ejecutar instrucciones en lenguaje natural amplifica tanto los beneficios como los peligros potenciales. Un prompt malicioso o ambiguo podría, en teoría, generar maniobras peligrosas si no existen salvaguardas robustas. Por ello, implementamos múltiples capas de verificación: chequeo de reglas de seguridad codificadas, simulación rápida de consecuencias antes de ejecución y confirmación humana obligatoria para acciones críticas.
 
-\begin{table}[t]
+\begin{table*}[t]
 \centering
 \caption{Comparativa de enfoques para operaciones de misión en constelaciones LEO.}
 \label{tab:comparativa_enfoques}
@@ -34,6 +34,6 @@ LLM Goal-oriented & Alta & Alta & Alta & En desarrollo \\
 Propuesta Híbrida & Muy Alta & Muy Alta & Alta & Alta con safeguards \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}
 
 En definitiva, el camino hacia la adopción operativa pasa necesariamente por estándares rigurosos de validación, auditoría continua de prompts y mecanismos de fallback a control manual directo. Solo así podremos aprovechar el enorme potencial de los LLMs sin comprometer la integridad de la misión.
