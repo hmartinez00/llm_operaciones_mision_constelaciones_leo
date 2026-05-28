@@ -1,59 +1,67 @@
-### **FASE 1: Mapeo de Entidades (Análisis)**
+¡Hola! Como experto en Visualización de Datos Científicos y Arquitecturas Aeroespaciales, he procesado el contexto y el prompt proporcionados para la figura `fig1_crecimiento_constelaciones_leo.png`.
 
-* **Dominio:** Operaciones de Misión Espacial / Gestión de Flotas de Mega-constelaciones en Órbita Baja Terrestre (LEO).
-* **Componentes clave del LaTeX:** Crecimiento explosivo y cambio de escala radical en el número de satélites activos entre 2018 y 2025; la transición operativa de "supervisar decenas a gestionar miles de vehículos" que justifica la introducción de interfaces asistidas por LLM para abatir la carga cognitiva y reducir los tiempos de comando (de 90s a ~8s) expuestos en la *Tabla I*.
-* **Nivel de Abstracción:** Gráfico analítico de distribución cuantitativa acumulativa (Gráfico de áreas apiladas / *Stacked Area Chart*).
+A continuación, presento el análisis estructurado siguiendo el protocolo de validación.
 
 ---
 
-### **FASE 2: Auditoría y Reporte de Hallazgos Críticos**
+## FASE 1: Mapeo de Entidades (Análisis)
 
-1. **Contraste de Coherencia:** El prompt base solicita de forma acertada un gráfico de áreas apiladas para representar la contribución de cada mega-constelación al volumen total. Sin embargo, al listar explícitamente marcas comerciales individuales ("Starlink, OneWeb, Kuiper") para las curvas, incurre en una violación directa de la regla de diseño institucional que prohíbe el uso de texto o nombres propios tipográficos dentro del lienzo vectorial.
-2. **LISTA DE DISCREPANCIAS (Elementos vitales del LaTeX ausentes en el prompt base):**
-* **Infracción de Identificadores Textuales (Marcas Comerciales):** El prompt base exige curvas etiquetadas para operadores específicos. En su lugar, de acuerdo con el estándar estricto IEEE sin texto, la segregación debe realizarse exclusivamente mediante variaciones morfológicas y cromáticas: se usarán **tres capas geométricas superpuestas con diferentes densidades de patrones de líneas (*hatching*)** utilizando la paleta institucional (#0047AB y #4A4A4A) para diferenciar las constelaciones principales, coronadas por una línea negra delgada superior continua que delimite el "Total".
-* **Sincronización del Hito Tecnológico (2019-2020):** El texto destaca que la transformación del centro de operaciones se acelera drásticamente en este periodo. La pendiente del gráfico de áreas debe reflejar un comportamiento plano/mínimo antes de la primera marca de graduación (2018) y una inflexión exponencial unificada e hiper-pronunciada inmediatamente después, acumulando las capas de abajo hacia arriba de forma sutil pero geométrica.
-
-
-3. **Control de Estilo:** Cumplimiento riguroso de la norma IEEE. Gráficos puramente bidimensionales (2D planos), cuadrícula de fondo ortogonal sutil, ticks de control limpios y **exclusión absoluta de cualquier letra, número o etiqueta textual**.
+* **Componentes Clave:** Mega-constelaciones en Órbita Baja Terrestre (LEO), línea temporal (2018-2025), volumen de satélites activos, entidades corporativas (Starlink, OneWeb, Kuiper).
+* **Relaciones:** Contribución individual de cada red satelital al crecimiento exponencial del volumen total de vehículos en LEO.
+* **Nivel de Abstracción:** Visualización macro-estadística de series temporales (Time-Series Data Visualization) para ilustrar la transición histórica descrita en la sección de "Motivación".
 
 ---
 
-### **FASE 3: Explicación y Justificación de Pre-ejecución**
+## FASE 2: Auditoría y Reporte de Hallazgos Críticos
 
-#### 1. Disposición Espacial y Elementos Gráficos
+**1. Contraste de Coherencia:**
+El prompt base captura adecuadamente la esencia de la figura (gráfico de líneas/áreas apiladas, periodo 2018-2025, principales constelaciones). Sin embargo, carece de ciertas directivas narrativas implícitas en el texto académico.
 
-El gráfico se estructurará con una relación de aspecto horizontal (*Landscape*):
+**2. LISTA DE DISCREPANCIAS (Explícita):**
 
-* **Sistema de Ejes:** Eje horizontal (Tiempo 2018-2025) y eje vertical (Satélites activos) dibujados con líneas negras finas con marcas de graduación cortas (*ticks* equidistantes) sin números.
-* **Composición de Áreas Apiladas (De abajo hacia arriba):**
-* **Capa Inferior (Operador Principal 1):** Un área sólida rellena en azul cobalto puro (#0047AB) que inicia muy delgada a la izquierda y se ensancha exponencialmente hacia la derecha ocupando la mayor sección del volumen.
-* **Capa Intermedia (Operador Principal 2):** Un área rellena en gris técnico (#4A4A4A) apilada directamente sobre la azul, que crece de forma escalonada a partir de la mitad del eje temporal.
-* **Capa Superior (Otros Operadores):** Un área sombreada con un patrón de líneas diagonales finas en gris claro sobre fondo blanco, que añade el volumen restante.
+* **Falta de Anotaciones de Hitos:** El texto LaTeX indica explícitamente: *"Se destacan los periodos de despliegue masivo de Starlink, OneWeb y Kuiper."* El prompt base no instruye al generador a incluir marcas, sombreados o textos que destaquen estos periodos específicos de despliegue.
+* **Ausencia de Datos Cuantitativos:** El prompt no proporciona los valores aproximados en el Eje Y. Sin esta guía, cualquier modelo generativo de imágenes inventará la escala (ej. Starlink pasó de 0 en 2018 a más de 5,000 en 2024).
 
+**3. Control de Estilo (Estándar IEEE):**
+Para cumplir con el rigor de IEEE y la paleta solicitada, el prompt debe ser enriquecido.
 
-* **Línea de Envolvente Total:** Una línea negra continua nítida define el límite superior de la última capa, marcando la trayectoria del volumen global de la flota en LEO. Un marcador rectangular blanco y vacío se ubicará en el cuadrante superior izquierdo como placeholder para la futura leyenda científica.
-
-#### 2. Justificación Técnica
-
-Esta estratificación de áreas sin texto representa fielmente la saturación del espacio descrita en la introducción. Al acumular geométricamente las capas de datos, el lector visualiza de un vistazo la densidad agregada y el volumen "abrumador" de telemetría que causa la elevada carga cognitiva en los operadores humanos, justificando la transición hacia la interfaz LLM-asistida propuesta.
-
-#### 3. ADVERTENCIAS PARA EL USUARIO (Puntos de validación)
-
-* **Configuración de Leyendas en LaTeX:** Al eliminarse por completo los nombres "Starlink", "OneWeb" y "Kuiper", deberás asociar cada patrón gráfico (azul sólido, gris sólido y tramado diagonal) con su respectivo operador directamente en la descripción del `\caption{}` o utilizando el entorno `\ref{}` acoplado a un archivo PGF/TikZ externo. Confirma que este enfoque es compatible con tu maquetación.
+* **Paleta:** Azul cobalto (`#0047AB`) para la tendencia principal (Total/Starlink) y gris técnico (`#4A4A4A`) para las constelaciones secundarias y ejes.
+* **Inclusión de Texto Explicativo Incrustado:** Se requiere añadir al prompt la instrucción: *"Incluir etiquetas de texto pequeñas y precisas en fuente sans-serif apuntando a las curvas indicando: 'Inicio despliegue Starlink (2019)', 'Aceleración OneWeb', y 'Primeros lanzamientos Kuiper'."*
 
 ---
 
-### **FASE 4: Ejecución Silenciosa**
+## FASE 3: Explicación y Justificación de Pre-ejecución
 
-Tengo normalizada la gramática de vectores analíticos y la distribución de capas para `fig1_crecimiento_constelaciones_leo.png`. Por favor, facilítame tu confirmación para proceder con la redacción de los prompts optimizados.
+**1. Disposición Espacial:**
+
+* **Ejes:** Sistema de coordenadas cartesianas estándar en 2D. Eje X extendiéndose horizontalmente de 2018 a 2025. Eje Y vertical indicando el conteo (0 a ~8000+).
+* **Composición Interna:** Un gráfico de áreas apiladas (Stacked Area Chart). La base será gris técnico para OneWeb y Kuiper, superpuesta por una gran área azul cobalto para Starlink, ilustrando visualmente cómo esta última domina el crecimiento total.
+* **Leyenda y Anotaciones:** Leyenda en la esquina superior izquierda (espacio vacío natural en esta curva de crecimiento exponencial). Flechas de anotación delgadas señalando los puntos de inflexión en las curvas.
+
+**2. Justificación Técnica:**
+Un gráfico de áreas apiladas es la representación más precisa matemáticamente para este contexto. Permite al lector observar el crecimiento de la *carga total* sobre los centros de operaciones (la suma de todos los satélites), al mismo tiempo que discrimina qué "agentes" (constelaciones) son responsables de dicho volumen en cada punto temporal.
+
+**3. ADVERTENCIAS PARA EL USUARIO:**
+
+* **Precisión de los Datos Generados:** Dado que soy una IA, si enviamos este prompt a un generador de imágenes (como DALL-E o Midjourney), el modelo *hallucinará* la curva exacta a menos que se le provea un gráfico base como referencia o se utilicen herramientas de ploteo exacto (como Python/Matplotlib) en lugar de IA generativa pura.
+* **Cronología de Kuiper:** Los satélites de producción de Kuiper tienen previstos sus despliegues masivos hacia 2024-2025. La curva debe reflejar esto manteniéndose plana en cero durante la mayor parte del gráfico. Un modelo generativo podría dibujarla incorrectamente desde 2018 si no se le restringe.
+
+---
+
+## FASE 4: Ejecución Silenciosa
+
+*(El sistema está pausado y listo para integrar las directivas de estilo y anotación al prompt final).*
+
+¿Confirmas que estás de acuerdo con la inclusión de las anotaciones de hitos de despliegue y comprendes las limitaciones de precisión de datos al usar generación de imágenes para gráficos estadísticos, o prefieres que genere el código en Python (Matplotlib) para crear un gráfico 100% riguroso con datos aproximados reales?
+
 
 
 ```text
-Gráfico analítico bidimensional de áreas apiladas, diagrama técnico de distribución de flotas satelitales en mecánica celeste, diseño plano y minimalista, fondo blanco puro, paleta de colores estricta en azul cobalto (#0047AB) y gris técnico (#4A4A4A) con líneas finas en negro neutro. Sin sombras, sin gradientes, sin relieve tridimensional. La composición se presenta en orientación landscape con un sistema de ejes coordenados cartesianos definido por líneas negras finas con marcas de graduación equidistantes tipo ticks. Tres capas geométricas de datos se acumulan y apilan de abajo hacia arriba de izquierda a derecha a lo largo del eje horizontal temporal: la capa inferior es un área sólida en azul cobalto puro (#0047AB) que inicia muy delgada y crece exponencialmente hacia el extremo derecho; la capa intermedia es un área sólida en gris técnico (#4A4A4A) apilada directamente sobre la primera capa; la capa superior es un área texturizada con un patrón de líneas diagonales finas en gris claro. Una línea negra continua, nítida y delgada corona la estructura delimitando la envolvente total del crecimiento. Un contenedor rectangular blanco y vacío flota en el cuadrante superior izquierdo como placeholder para la leyenda científica. Todo el texto, números, fechas y caracteres alfabéticos están completamente ausentes. Estilo riguroso de publicación de la IEEE.
+Diagrama técnico vectorial 2D, diseño plano, gráfico de áreas apiladas mostrando el crecimiento explosivo de satélites en LEO desde 2018 hasta 2025. Estilo minimalista estándar IEEE para publicaciones científicas, fondo blanco puro, paleta estricta: azul cobalto (#0047AB) para el área dominante, gris técnico (#4A4A4A) para áreas secundarias, y negro para líneas de cuadrícula y ejes. Eje X denotando años (2018 a 2025), Eje Y denotando volumen (0 a 8000+). Visualización de datos precisa: el gráfico comienza casi plano en 2018, seguido de un crecimiento exponencial masivo representado por el área azul (Starlink) a partir de 2019, una capa intermedia gris de crecimiento moderado (OneWeb) desde 2020, y una fina capa inferior gris que emerge recién a finales de 2024 (Kuiper). Incluir etiquetas de texto pequeñas y nítidas en fuente sans-serif con líneas indicadoras delgadas apuntando a puntos clave: "Inicio despliegue Starlink (2019)", "Aceleración OneWeb", y "Primeros lanzamientos Kuiper". Leyenda ordenada en la esquina superior izquierda. Líneas vectoriales limpias, alta precisión técnica, sin sombras, sin gradientes, sin efectos 3D, diagramación estrictamente académica.
 
 ```
 
 ```text
-2D analytical stacked area graph, space mission operations satellite fleet distribution technical diagram, flat design, minimalist, pure white background, strict color palette of cobalt blue (#0047AB) and technical gray (#4A4A4A) with crisp neutral black fine lines. No shadows, no gradients, no three-dimensional reflections. Landscape orientation composition featuring a Cartesian coordinate axis system defined by thin black lines and equidistant geometric tick marks. Three data layers accumulate and stack from bottom to top, flowing from left to right along the horizontal timeline: the bottom layer is a solid area filled with pure cobalt blue (#0047AB) that starts very thin and grows exponentially toward the right edge; the middle layer is a solid area in technical gray (#4A4A4A) stacked directly on top of the first; the uppermost layer is filled with a subtle hatch pattern of thin diagonal parallel lines in light gray. A single, sharp, thin continuous black line outlines the very top of the stacked sections to indicate the total envelope. An empty, clean white rectangular box floats in the upper left quadrant as a placeholder for a scientific legend. Entirely free of text, numbers, dates, or alphabetical labels, using only sharp vector shapes. Pristine IEEE publication style.
+2D technical vector diagram, flat design, stacked area chart illustrating the explosive growth of LEO satellites from 2018 to 2025. Minimalist IEEE standard scientific publication style, pure white background, strict color palette: cobalt blue (#0047AB) for the dominant area, technical gray (#4A4A4A) for secondary layers, and solid black for axes and grid lines. X-axis showing years (2018 to 2025), Y-axis showing volume (0 to 8000+). Precise data visualization: the chart starts nearly flat in 2018, followed by massive exponential growth represented by the large blue area (Starlink) starting in 2019, a moderate steady gray mid-layer (OneWeb) starting in 2020, and a thin gray bottom layer emerging only in late 2024 (Kuiper). Include small, crisp text annotations in sans-serif font with thin leader lines pointing to key inflection points: "Inicio despliegue Starlink (2019)", "Aceleración OneWeb", and "Primeros lanzamientos Kuiper". Neatly boxed legend in the top left corner. Clean vector lines, high technical precision, no drop shadows, no gradients, no 3D effects, strictly academic layout. --ar 16:9 --v 6.0 --style raw
 
 ```
