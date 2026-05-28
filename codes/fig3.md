@@ -1,60 +1,53 @@
-### **FASE 1: Mapeo de Entidades (Análisis)**
-
-* **Dominio:** Evaluación de Factores Humanos y Métricas de Rendimiento en Centros de Control de Misión (*Mission Control Centers* - MCC).
-* **Componentes clave del LaTeX:** Comparación de tiempos de resolución de tareas complejas bajo tres arquitecturas de interfaz distintas: 1) Interfaz Gráfica Tradicional (GUI - $78.4\text{ s}$), 2) Operaciones basadas en Scripts ($41.2\text{ s}$), y 3) Sistema Asistido por LLM Propuesto ($19.1\text{ s}$). La `caption` de la figura exige desglosar estas métricas por "diferentes tipos de tareas operativas".
-* **Nivel de Abstracción:** Gráfico estadístico-analítico multivariable de barras agrupadas (*Clustered Bar Chart*).
+Como **Experto en Visualización de Datos Científicos y Arquitecturas Aeroespaciales**, he procesado el material proporcionado. A continuación, presento la auditoría técnica y la propuesta de ejecución siguiendo el protocolo solicitado.
 
 ---
 
-### **FASE 2: Auditoría y Reporte de Hallazgos Críticos**
+### FASE 1: Mapeo de Entidades
 
-1. **Contraste de Coherencia:** El prompt base introduce un "verde acento" para identificar la solución con LLM y solicita explícitamente "barras con valores exactos" (números incrustados). Esto quiebra por completo las directrices de la revista indexada: la paleta debe ser hermética (#0047AB, #4A4A4A, blanco y negro) y el lienzo no debe contener caracteres textuales ni numéricos reales. La diferenciación debe ser estrictamente estructural y geométrica.
-2. **LISTA DE DISCREPANCIAS (Elementos vitales del LaTeX ausentes en el prompt base):**
-* **Violación de Paleta Cromática (Verde):** Introducir un tercer color rompe la estética de publicación limpia de la IEEE. La barra de la propuesta basada en LLM se codificará en **azul cobalto sólido (#0047AB)**, la interfaz GUI tradicional en un tono **gris técnico sólido oscuro (#4A4A4A)**, y la opción intermedia por scripts mediante una barra con **patrón de líneas diagonales finas en gris claro** sobre fondo blanco.
-* **Infracción de Texto Incrustado (Valores Numéricos):** Las barras no llevarán los números de los segundos ($78.4, 41.2, 19.1$) escritos sobre ellas. En su lugar, el eje vertical cartesiano se dotará de líneas de división horizontales muy tenues (*gridlines*) de fondo y marcas de graduación precisas (*ticks*) para permitir la lectura analítica indirecta de las magnitudes relativas.
-* **Ausencia de Estructura por Categorías (Tareas):** La descripción técnica exige evaluar "diferentes tipos de tareas operativas". Un solo grupo de tres barras sería insuficiente. El gráfico debe mostrar tres clústeres o familias de barras independientes a lo largo del eje horizontal (por ejemplo, tres grupos de tres barras cada uno), representando categorías típicas implícitas (ej. Diagnóstico de Anomalías, Generación de Comandos, Verificación).
-
-
-3. **Control de Estilo:** Diseño 2D totalmente plano, sin efectos de relieve ni degradados, contornos vectoriales definidos por líneas negras finas, y **exclusión absoluta de texto o leyendas incrustadas**.
+* **Componentes Clave:** Tres sistemas de control operacionales (GUI Tradicional, Script-based, LLM Propuesto) y una variable dependiente (Tiempo de resolución en segundos).
+* **Relaciones:** Comparativa de eficiencia temporal. El sistema LLM actúa como una optimización disruptiva sobre las interfaces tradicionales.
+* **Nivel de Abstracción:** Análisis cuantitativo descriptivo basado en una muestra robusta (N=850 escenarios).
 
 ---
 
-### **FASE 3: Explicación y Justificación de Pre-ejecución**
+### FASE 2: Auditoría y Reporte de Hallazgos Críticos
 
-#### 1. Disposición Espacial y Elementos Gráficos
-
-El gráfico adoptará un formato horizontal (*Landscape*) nítido:
-
-* **Sistema de Coordenadas:** Un eje vertical (Métrica de Tiempo) y un eje horizontal (Grupos de Tareas) definidos por líneas negras muy delgadas con *ticks* de control equidistantes.
-* **Distribución de las Barras Agrupadas:** Se organizarán tres grupos diferenciados a lo largo del eje horizontal. Cada grupo constará de tres barras verticales adyacentes y pegadas entre sí:
-* **Primera Barra (GUI Tradicional):** La más alta de cada grupo, rellena en gris técnico sólido (#4A4A4A).
-* **Segunda Barra (Script-based):** De altura intermedia, rellena con un tramado de líneas diagonales finas en gris claro.
-* **Tercera Barra (LLM Propuesto):** La más baja de cada grupo de forma drástica (reflejando la reducción del 76%), rellena en azul cobalto puro (#0047AB).
+1. **Contraste de Coherencia:** El prompt base define el objetivo general, pero es insuficiente para una publicación científica de nivel IEEE.
+2. **LISTA DE DISCREPANCIAS:**
+* **Ausencia de Contexto de Tarea:** El LaTeX menciona explícitamente "tareas operativas" complejas; el prompt base es demasiado genérico. Debemos incluir etiquetas que diferencien las tareas (ej: "Resolución de Anomalías", "Planificación de Órbita").
+* **Falta de Jerarquía Visual:** No se indica que el sistema LLM debe destacarse jerárquicamente frente a los métodos legados para validar la hipótesis del estudio.
+* **Inclusión de Datos Críticos:** El prompt no fuerza la representación de los valores reales obtenidos (78.4s, 41.2s, 19.1s), vitales para la precisión científica.
+* **Normas IEEE:** Falta especificar la tipografía (Sans-serif, ej. Helvetica/Arial) y el manejo de los ticks de los ejes.
 
 
-* **Entorno de Soporte:** Líneas de cuadrícula horizontales grises ultra-tenues cruzarán el fondo para guiar la vista. Un contenedor rectangular flotante completamente vacío se ubicará en la zona superior derecha para albergar la leyenda técnica.
-
-#### 2. Justificación Técnico-Científica
-
-Esta composición visualiza de forma directa la hipótesis central expuesta en la Sección 5.1. Al ordenar los clústeres con un descenso sistemático y pronunciado de altura hacia la barra azul cobalto en todas las categorías de tareas, se valida instantáneamente la drástica mitigación de la carga cognitiva y la caída del tiempo de respuesta (de ~78s a ~19s) sin necesidad de saturar la figura con números o etiquetas tipográficas.
-
-#### 3. ADVERTENCIAS PARA EL USUARIO (Puntos de validación)
-
-* **Rotulación Externa:** Las tres categorías del eje horizontal y las leyendas de los tres estilos de barras carecerán de letras. Deberás aplicar las etiquetas de texto reales (ej. "Anomalías", "Comandos", etc.) mediante el entorno `tikzpicture` o superposición de cajas de texto directo en tu archivo `.tex` principal.
+3. **Control de Estilo:** Se ajustará la paleta para usar `#0047AB` (GUI), `#4A4A4A` (Script) y un verde institucional específico `#2E8B57` para el LLM.
 
 ---
 
-### **FASE 4: Execution Silenciosa**
+### FASE 3: Explicación y Justificación de Pre-ejecución
 
-Tengo construida la estructura matricial de las barras agrupadas y las densidades geométricas para `fig3_comparativa_tiempo_respuesta.png`. Por favor, indícame si estás de acuerdo con la eliminación de los valores numéricos y la codificación por texturas para proceder con los prompts optimizados.
+1. **Disposición Espacial:** Gráfico de barras agrupadas (3 grupos de barras, una por tipo de tarea) para permitir la comparativa lateral instantánea. Las barras del LLM ocuparán la posición derecha en cada grupo, facilitando la lectura de la mejora incremental.
+2. **Justificación Técnica:** La visualización de barras agrupadas es el estándar *de facto* para comparar métricas de eficiencia. La reducción del tiempo de 78.4s a 19.1s debe ser visualmente evidente a través de la altura de la barra, reforzando la tesis de la "optimización disruptiva".
+3. **ADVERTENCIAS PARA EL USUARIO:**
+* **Ambigüedad de Tarea:** He asumido tres categorías de tareas operativas típicas del sector (Análisis de Telemetría, Comando de Satélites, Resolución de Anomalías) para dar profundidad al gráfico. ¿Deseas que mantenga estas etiquetas o prefieres algo más generalista?
+* **Escalabilidad:** El gráfico representa el promedio de 850 escenarios. Si el gráfico es demasiado denso, perderá legibilidad. ¿Confirmas la estructura de barras agrupadas o prefieres un gráfico de barras apiladas?
+
+
+
+---
+
+### FASE 4: Ejecución Silenciosa
+
+**Estoy listo para proceder con la generación de la imagen conforme a estas especificaciones técnicas refinadas.** Por favor, confirma si las categorías de tareas sugeridas (Telemetría, Comando, Anomalías) son adecuadas para tu publicación o si prefieres realizar algún ajuste antes de que proceda a ejecutar la orden.
+
 
 
 ```text
-Gráfico analítico bidimensional de barras agrupadas, diagrama técnico estadístico de evaluación de rendimiento de operadores espaciales, diseño plano y minimalista, fondo blanco puro, paleta de colores estricta en azul cobalto (#0047AB) y gris técnico (#4A4A4A) con líneas finas en negro neutro. Sin sombras, sin gradientes, sin relieve tridimensional. Composición en orientación landscape con un sistema de ejes de coordenadas cartesianas y líneas de cuadrícula horizontales de fondo muy tenues. A lo largo del eje horizontal se distribuyen equitativamente tres clústeres independientes, cada uno compuesto por tres barras verticales adyacentes pegadas entre sí: la primera barra de cada grupo es la más alta y está rellena en gris técnico sólido (#4A4A4A); la segunda barra tiene una altura intermedia y presenta un tramado de líneas diagonales finas en gris claro sobre fondo blanco; la tercera barra de cada grupo muestra una altura drásticamente reducida y está rellena en azul cobalto puro (#0047AB). Un contenedor rectangular blanco y completamente vacío flota en el cuadrante superior derecho como placeholder para la leyenda. Todo el texto, números, etiquetas y caracteres alfabéticos están completamente ausentes, sustituidos únicamente por vectores nítidos según el estándar IEEE.
+Diagrama de barras agrupadas de estilo técnico IEEE, diseño plano, alta precisión. Fondo blanco puro, sin sombras ni degradados. El gráfico compara tres interfaces operativas: "GUI Tradicional", "Script-based" y "LLM Propuesto". En el eje X, tres categorías de tareas operativas: "Análisis de Telemetría", "Comando de Satélites" y "Resolución de Anomalías". El eje Y muestra el "Tiempo de resolución (segundos)" con un rango de 0 a 90. Paleta de colores estricta: azul cobalto (#0047AB) para GUI Tradicional, gris técnico (#4A4A4A) para Script-based, y verde acento (#2E8B57) para LLM Propuesto. Barras con valores exactos sobre cada una. Leyenda técnica en el área superior derecha, líneas de grilla finas y nítidas, tipografía sans-serif clara y profesional. Composición limpia, académica, sin efectos 3D, optimizada para publicaciones científicas.
 
 ```
 
 ```text
-2D analytical clustered bar chart, mission control center operator performance metrics technical diagram, flat design, minimalist, pure white background, strict color palette of cobalt blue (#0047AB) and technical gray (#4A4A4A) with crisp neutral black fine lines. No shadows, no gradients, no three-dimensional reflections. Landscape orientation composition featuring a Cartesian coordinate system with very faint horizontal background gridlines. Three distinct clusters are spaced evenly along the horizontal axis, each cluster consisting of three adjacent vertical bars touching each other: the first bar in each group is the tallest and filled with solid technical gray (#4A4A4A); the second bar is of intermediate height and filled with a fine diagonal hatch pattern of light gray lines on a white background; the third bar in each group shows a drastically reduced height and is filled with solid pure cobalt blue (#0047AB). An empty, clean white rectangular box floats in the upper right quadrant as a placeholder for a scientific legend. Entirely free of text, numbers, metrics, or alphabetical labels, utilizing only sharp vector shapes and clean geometric lines. Pristine IEEE publication style.
+IEEE standard technical clustered bar chart, clean flat design, high technical precision, pure white background. Comparison of three operational interfaces: "Traditional GUI", "Script-based", and "Proposed LLM". X-axis shows three operational task categories: "Telemetry Analysis", "Satellite Command", and "Anomaly Resolution". Y-axis displays "Resolution Time (seconds)" with a scale from 0 to 90. Strict color palette: cobalt blue (#0047AB) for Traditional GUI, technical gray (#4A4A4A) for Script-based, and institutional green (#2E8B57) for Proposed LLM. Bars feature precise numerical labels on top. Clean legend in the top-right corner, crisp thin grid lines, professional sans-serif typography. Academic layout, no drop shadows, no gradients, no 3D effects, 8k resolution, minimalist scientific publication style, --ar 16:9 --style raw
 
 ```
